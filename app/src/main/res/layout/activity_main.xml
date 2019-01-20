@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  tools:showIn="@layout/activity_main"
+  tools:context=".MainActivity"
+  >
+
+  <Button
+    android:id="@+id/prg_32"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="PRG - 90m (32Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintVertical_chainStyle="spread"
+    app:layout_constraintBottom_toTopOf="@id/prg_24"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+
+  <Button
+    android:id="@+id/prg_24"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="PRG - 30m (24Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/prg_32"
+    app:layout_constraintBottom_toTopOf="@id/prg_110"
+    />
+
+  <Button
+    android:id="@+id/prg_110"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="PRG - 24h (110Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/prg_24"
+    app:layout_constraintBottom_toTopOf="@id/prg_310"
+    />
+
+  <Button
+    android:id="@+id/prg_310"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="PRG - 72h (310Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/prg_110"
+    app:layout_constraintBottom_toTopOf="@id/divider_1"
+    />
+
+  <View
+    android:id="@+id/divider_1"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="@color/divider"
+    app:layout_constraintTop_toBottomOf="@id/prg_310"
+    app:layout_constraintBottom_toTopOf="@id/brn_20"
+    />
+
+  <Button
+    android:id="@+id/brn_20"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="BRN - 20m (20Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintVertical_chainStyle="spread"
+    app:layout_constraintBottom_toTopOf="@id/brn_29"
+    app:layout_constraintTop_toBottomOf="@id/divider_1"
+    />
+
+  <Button
+    android:id="@+id/brn_29"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="BRN - 75m (29Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/brn_20"
+    app:layout_constraintBottom_toTopOf="@id/brn_99"
+    />
+
+  <Button
+    android:id="@+id/brn_99"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="BRN - 24h (99Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/brn_29"
+    app:layout_constraintBottom_toTopOf="@+id/divider_2"
+    />
+
+  <View
+    android:id="@+id/divider_2"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="@color/divider"
+    app:layout_constraintTop_toBottomOf="@id/brn_99"
+    app:layout_constraintBottom_toTopOf="@id/zln_40"
+    />
+
+  <Button
+    android:id="@+id/zln_40"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="ZLN - 40m (20Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintVertical_chainStyle="spread"
+    app:layout_constraintBottom_toTopOf="@id/zln_24"
+    app:layout_constraintTop_toBottomOf="@id/divider_2"
+    />
+
+  <Button
+    android:id="@+id/zln_24"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="ZLN - 24h (90Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/zln_24_disc"
+    app:layout_constraintTop_toBottomOf="@id/zln_40"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+  <Button
+    android:id="@+id/zln_24_disc"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="ZLN - 24h (zlev) (75Kč)"
+    android:textColor="@color/primaryText"
+    app:layout_constraintStart_toEndOf="@id/zln_24"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/zln_40"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+
+</android.support.constraint.ConstraintLayout>
