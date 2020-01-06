@@ -1,4 +1,7 @@
 <resources>
   <string name="app_name">SmsTicketHelper</string>
   <string name="action_settings">Settings</string>
+  <string name="button_template">%s - %s (%dKč)</string>
+  <string name="dialog_message">Odeslat sms \"%s\" na číslo %s</string>
+  <string name="dialog_title">Odeslat</string>
 </resources>
