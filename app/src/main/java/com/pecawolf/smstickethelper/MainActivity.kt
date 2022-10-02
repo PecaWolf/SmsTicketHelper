@@ -1,16 +1,20 @@
 package com.pecawolf.smstickethelper
 
-import android.*
-import android.content.*
-import android.content.pm.*
-import android.os.*
-import android.support.v4.app.*
-import android.support.v4.content.*
-import android.support.v7.app.*
-import android.telephony.*
-import android.view.*
-import android.widget.*
-import java.time.*
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Bundle
+import android.telephony.SmsManager
+import android.telephony.TelephonyManager
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import java.time.Duration
 
 class MainActivity: AppCompatActivity() {
 
