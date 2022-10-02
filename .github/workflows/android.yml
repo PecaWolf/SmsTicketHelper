@@ -25,16 +25,16 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-#      - name: Sign App APK
-#        uses: r0adkll/sign-android-release@v1
-#        id: sign_app
-#        with:
-#          releaseDirectory: app/release
-#          signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
-#          alias: ${{ secrets.KEY_ALIAS }}
-#          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-#          keyPassword: ${{ secrets.KEY_PASSWORD }}
-#        # ID used to access action output
+    - name: Sign App APK
+      uses: r0adkll/sign-android-release@v1
+      id: sign_app
+      with:
+        releaseDirectory: app/release
+        signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
+        alias: ${{ secrets.KEY_ALIAS }}
+        keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+        keyPassword: ${{ secrets.KEY_PASSWORD }}
+      # ID used to access action output
 #
 #      - name: Build with Gradle
 #        run: ./gradlew buildRelease
