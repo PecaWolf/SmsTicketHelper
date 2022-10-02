@@ -3,13 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-  compileSdkVersion 28
+  compileSdkVersion 31
   defaultConfig {
     applicationId "com.pecawolf.smstickethelper"
     minSdkVersion 26
-    targetSdkVersion 28
-    versionCode 1
-    versionName "1.0"
+    targetSdkVersion 31
+    versionCode 2
+    versionName "0.2.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
   buildTypes {

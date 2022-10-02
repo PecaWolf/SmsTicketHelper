@@ -23,20 +23,20 @@ class MainActivity: AppCompatActivity() {
 
     val CITIES = mapOf(
       Pair(PRG, mapOf(
-        Pair("30m", Ticket("DPT24", 24, Duration.ofMinutes(30))),
-        Pair("90m", Ticket("DPT32", 32, Duration.ofMinutes(90))),
-        Pair("24h", Ticket("DPT110", 11, Duration.ofHours(24))),
-        Pair("72h", Ticket("DPT310", 31, Duration.ofHours(72)))
+        Pair("90m", Ticket("DPT42", 42, Duration.ofMinutes(90))),
+        Pair("30m", Ticket("DPT31", 31, Duration.ofMinutes(30))),
+        Pair("24h", Ticket("DPT120", 120, Duration.ofHours(24))),
+        Pair("72h", Ticket("DPT330", 330, Duration.ofHours(72)))
       )),
       Pair(BRN, mapOf(
-        Pair("20m", Ticket("BRNO20", 32, Duration.ofMinutes(20))),
+        Pair("20m", Ticket("BRNO20", 20, Duration.ofMinutes(20))),
         Pair("75m", Ticket("BRNO", 29, Duration.ofMinutes(75))),
         Pair("24h", Ticket("BRNOD", 99, Duration.ofHours(24)))
       )),
       Pair(ZLN, mapOf(
-        Pair("40m", Ticket("DSZO", 24, Duration.ofMinutes(40))),
-        Pair("24h", Ticket("DSZO24", 11, Duration.ofHours(24))),
-        Pair("24hZ", Ticket("DSZO24Z", 31, Duration.ofHours(24)))
+        Pair("40m", Ticket("DSZO", 20, Duration.ofMinutes(40))),
+        Pair("24h", Ticket("DSZO24", 90, Duration.ofHours(24))),
+        Pair("24hZ", Ticket("DSZO24Z", 45, Duration.ofHours(24)))
       ))
     )
 
