@@ -22,8 +22,9 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew buildRelease
 
     - name: Sign App APK
       uses: r0adkll/sign-android-release@v1
@@ -35,15 +36,11 @@ jobs:
         keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}
       # ID used to access action output
-#
-#      - name: Build with Gradle
-#        run: ./gradlew buildRelease
-#
-#    - name: Deploy to Alpha
-#      uses: r0adkll/upload-google-play@v1
-#      with:
-#        serviceAccountJsonPlainText: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-#        packageName: com.c4p.smartcongress2
-#        track: alpha
-#        releaseFiles: app/mouedu/release/app-mouedu-release.apk
-#
+
+    - name: Deploy to Alpha
+      uses: r0adkll/upload-google-play@v1
+      with:
+        serviceAccountJsonPlainText: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+        packageName: com.c4p.smartcongress2
+        track: alpha
+        releaseFiles: app/mouedu/release/app-mouedu-release.apk
