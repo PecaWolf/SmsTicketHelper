@@ -48,9 +48,8 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: app
-#        path: app/build/outputs/apk/debug/app-debug.apk
         path: app/build/outputs/apk/release/app-release-unsigned-signed.apk
-      # ID used to access action output
+        retention-days: 7
 #
     - name: Deploy to Alpha
       uses: r0adkll/upload-google-play@v1
