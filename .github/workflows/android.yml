@@ -44,11 +44,18 @@ jobs:
         keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}
 
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
+
+    - name: Rename APK
+      run: mv app/build/outputs/apk/release/app-release-unsigned-signed.apk app/build/outputs/apk/release/app-release-${{ steps.date.outputs.date }}.apk
+
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
         name: app
-        path: app/build/outputs/apk/release/app-release-unsigned-signed.apk
+        path: app/build/outputs/apk/release/app-release-${{ steps.date.outputs.date }}.apk
         retention-days: 7
 #
 #    - name: Deploy to Alpha
