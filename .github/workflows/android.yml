@@ -37,15 +37,15 @@ jobs:
 #        path: app/build/outputs/apk/debug/app-debug.apk
         path: app/release/app-release.apk
 
-#    - name: Sign App APK
-#      uses: r0adkll/sign-android-release@v1
-#      id: sign_app
-#      with:
-#        releaseDirectory: app/release
-#        signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
-#        alias: ${{ secrets.KEY_ALIAS }}
-#        keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-#        keyPassword: ${{ secrets.KEY_PASSWORD }}
+    - name: Sign App APK
+      uses: r0adkll/sign-android-release@v1
+      id: sign_app
+      with:
+        releaseDirectory: app/release
+        signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
+        alias: ${{ secrets.KEY_ALIAS }}
+        keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+        keyPassword: ${{ secrets.KEY_PASSWORD }}
       # ID used to access action output
 #
 #    - name: Deploy to Alpha
