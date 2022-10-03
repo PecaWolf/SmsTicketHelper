@@ -24,7 +24,10 @@ jobs:
       run: chmod +x gradlew
       
     - name: Build with Gradle
-      run: ./gradlew buildRelease
+      run: ./gradlew build
+
+    - name: Build Release
+      run: ./gradlew assembleRelease
 
     - name: Releasing using Hub
       uses: kyze8439690/action-release-releaseapk@master
