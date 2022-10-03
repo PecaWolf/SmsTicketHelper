@@ -26,15 +26,14 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Build Release
-      run: ./gradlew assembleDebug
+    - name: Build Debug
+      run: ./gradlew assembleDebug --stacktrace
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v2
+    - name: Upload APK
+      uses: actions/upload-artifact@v1
       with:
-        name: assets
-        path: |
-          ${{ github.workspace }}/app/build/outputs/bundle/release
+        name: app
+        path: app/build/outputs/apk/debug/app-debug.apk
 
 #    - name: Sign App APK
 #      uses: r0adkll/sign-android-release@v1
