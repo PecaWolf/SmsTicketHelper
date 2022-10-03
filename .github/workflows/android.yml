@@ -27,7 +27,7 @@ jobs:
       run: ./gradlew build
 
     - name: Build Release
-      run: ./gradlew assembleRelease
+      run: ./gradlew assembleDebug
 
 #    - name: Sign App APK
 #      uses: r0adkll/sign-android-release@v1
