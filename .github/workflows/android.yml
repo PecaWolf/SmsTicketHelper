@@ -30,7 +30,7 @@ jobs:
       uses: r0adkll/sign-android-release@v1
       id: sign_app
       with:
-        releaseDirectory: app/release
+        releaseDirectory: app
         signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
         alias: ${{ secrets.KEY_ALIAS }}
         keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -41,6 +41,6 @@ jobs:
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-        packageName: com.c4p.smartcongress2
+        packageName: com.pecawolf.smstickethelper
         track: alpha
-        releaseFiles: app/mouedu/release/app-mouedu-release.apk
+        releaseFiles: app/app-mouedu-release.apk
