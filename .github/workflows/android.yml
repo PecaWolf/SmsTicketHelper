@@ -29,6 +29,13 @@ jobs:
     - name: Build Release
       run: ./gradlew assembleDebug
 
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: assets
+        path: |
+          ${{ github.workspace }}/app/build/outputs/bundle/release
+
 #    - name: Sign App APK
 #      uses: r0adkll/sign-android-release@v1
 #      id: sign_app
