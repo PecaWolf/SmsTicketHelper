@@ -33,13 +33,14 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: app
-        path: app/build/outputs/apk/release/app-release.apk
+#        path: app/build/outputs/apk/debug/app-debug.apk
+        path: app/release/app-release.apk
 
     - name: Sign App APK
       uses: r0adkll/sign-android-release@v1
       id: sign_app
       with:
-        releaseDirectory: app
+        releaseDirectory: app/release
         signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
         alias: ${{ secrets.KEY_ALIAS }}
         keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
