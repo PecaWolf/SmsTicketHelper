@@ -52,10 +52,10 @@ jobs:
         path: app/build/outputs/apk/release/app-release-unsigned-signed.apk
       # ID used to access action output
 #
-#    - name: Deploy to Alpha
-#      uses: r0adkll/upload-google-play@v1
-#      with:
-#        serviceAccountJsonPlainText: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-#        packageName: com.pecawolf.smstickethelper
-#        track: alpha
-#        releaseFiles: app/app-mouedu-release.apk
+    - name: Deploy to Alpha
+      uses: r0adkll/upload-google-play@v1
+      with:
+        serviceAccountJsonPlainText: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+        packageName: com.pecawolf.smstickethelper
+        track: alpha
+        releaseFiles: app/app-mouedu-release.apk
