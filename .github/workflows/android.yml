@@ -30,12 +30,16 @@ jobs:
 #      run: ./gradlew assembleDebug
       run: ./gradlew assembleRelease
 
+#    - name: Restore Keystore
+#      run: |
+#        echo "${{ secrets.RELEASE_KEYSTORE
+
     - name: Sign App APK
       uses: r0adkll/sign-android-release@v1
       id: sign_app
       with:
         releaseDirectory: app/build/outputs/apk/release
-        signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
+        signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE_2 }}
         alias: ${{ secrets.KEY_ALIAS }}
         keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}
