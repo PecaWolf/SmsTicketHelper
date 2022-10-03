@@ -26,25 +26,26 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Build Release
-      run: ./gradlew assembleRelease --stacktrace
+    - name: Build APK
+      run: ./gradlew assembleDebug
+#      run: ./gradlew assembleRelease
 
     - name: Upload APK
       uses: actions/upload-artifact@v1
       with:
         name: app
-#        path: app/build/outputs/apk/debug/app-debug.apk
-        path: app/release/app-release.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+#        path: app/release/app-release.apk
 
-    - name: Sign App APK
-      uses: r0adkll/sign-android-release@v1
-      id: sign_app
-      with:
-        releaseDirectory: app/release
-        signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
-        alias: ${{ secrets.KEY_ALIAS }}
-        keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-        keyPassword: ${{ secrets.KEY_PASSWORD }}
+#    - name: Sign App APK
+#      uses: r0adkll/sign-android-release@v1
+#      id: sign_app
+#      with:
+#        releaseDirectory: app/release
+#        signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE }}
+#        alias: ${{ secrets.KEY_ALIAS }}
+#        keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+#        keyPassword: ${{ secrets.KEY_PASSWORD }}
       # ID used to access action output
 #
 #    - name: Deploy to Alpha
