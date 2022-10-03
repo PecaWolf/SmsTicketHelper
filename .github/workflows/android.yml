@@ -49,7 +49,7 @@ jobs:
       with:
         name: app
 #        path: app/build/outputs/apk/debug/app-debug.apk
-        path: app/build/outputs/apk/release/app-release.apk
+        path: app/build/outputs/apk/release/app-release-unsigned-signed.apk
       # ID used to access action output
 #
 #    - name: Deploy to Alpha
